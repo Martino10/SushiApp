@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+    padding: 2rem;
+    background: #222831;
+    font-family: sans-serif;
+}
+
+.sushiCard {
+    width: 50vw;
+    height: 80vh;
+    margin: 0 auto;
+    box-shadow: 0 0.2rem 2.5rem black;
+    position: relative;
+}
+
+.sushiCard::after {
+    content: "";
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #07689f;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+}
+
+.sushiCard__figure {
+    width: 100%;
+    height: 60%;
+}
+
+.sushiCard__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sushiCard__text {
+    padding-left: 2rem;
+    color: #eeeeee;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.sushiCard__btnSection {
+    height: 20%;
+    padding-left: 2rem;
+}
+
+.sushiCard__button {
+    font-size: 120%;
+    width: 25rem;
+    height: 8rem;
+    box-sizing: border-box;
+    background: #07689f;
+    border: none;
+    color: #eeeeee;
+    box-shadow: 0 0 1rem #07689f;
+    transition: 0.2s all;
+}
+
+.sushiCard__button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 2rem #07689f;
+}
+
+.sushiCard__backtohome {
+    display: block;
+    margin-top: 1rem;
+    color: #eeeeee;
+}
+
+.sushiGridCard {
+    grid-column: span 4;
+    width: 100%;
+    height: 35rem;
+    box-shadow: 0 0.5rem 2rem black;
+    position: relative;
+    transition: 0.2s all;
+    background: #222831;
+}
+
+.sushiGridCard__article {
+    height: 100%;
+    width: 100%;
+}
+
+.sushiGridCard > a {
+    text-decoration: none;
+}
+
+.sushiGridCard__heading {
+    padding-left: 2rem;
+    color: #eeeeee;
+}
+
+.sushiGridCard__header {
+    width: 100%;
+    height: 20%;
+}
+
+.sushiGridCard__figure {
+    width: 100%;
+    height: 60%;
+}
+
+.sushiGridCard__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sushiGridCard__textsection {
+    width: 100%;
+    height: 20%;
+}
+
+.sushiGridCard__text {
+    padding-left: 2rem;
+    color: #eeeeee;
+}
+
+.sushiGridCard:hover {
+    position: relative;
+    transform: scale(1.03);
+    z-index: 1;
+}
+
+/* style for kind of sushi */
+.sushiGridCard::after {
+    content: "";
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+}
+
+.sushiGridCard[data-kind-of-sushi="Maki"]::after {
+    background:#f67280;
+}
+.sushiGridCard[data-kind-of-sushi="Nigiri"]::after {
+    background:#00C897;
+}
+.sushiGridCard[data-kind-of-sushi="Sashimi"]::after {
+    background:#00FFDD;
+}
+.sushiGridCard[data-kind-of-sushi="Temaki"]::after {
+    background:#E83A14;
+}
+.sushiGridCard[data-kind-of-sushi="Uramaki"]::after {
+    background: #0E3EDA;
+}
+
+.gridCard {
+    grid-column: span 4;
+    margin: 0 auto;
+    width: 75%;
+    height: 50rem;
+    box-shadow: 0 0.5rem 2rem black;
+    position: relative;
+    transition: 0.2s all;
+    background: #222831;
+}
+
+.gridCard__article {
+    height: 100%;
+    width: 100%;
+}
+
+.gridCard > a {
+    text-decoration: none;
+}
+
+.gridCard__heading {
+    padding-left: 2rem;
+    color: #eeeeee;
+}
+
+.gridCard__header {
+    width: 100%;
+    height: 20%;
+}
+
+.gridCard__figure {
+    width: 100%;
+    height: 60%;
+}
+
+.gridCard__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    filter: brightness(1.2);
+}
+
+.gridCard__textsection {
+    width: 100%;
+    height: 20%;
+}
+
+.gridCard__text {
+    padding-left: 2rem;
+    color: #eeeeee;
+}
+
+.gridCard:hover {
+    position: relative;
+    transform: scale(1.03);
+    z-index: 1;
+}
+
+.create-form {
+    width: 40%;
+    margin: 0 auto;
+    box-shadow: 0 0.5rem 2rem black;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #eeeeee;
+}
+
+.create-form__form {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.create-form__input {
+    display: block;
+    width: 80%;
+    margin-top: 1rem;
+    font-size: 100%;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.create-form__input--big {
+    height: 10rem;
+}
+
+.create-form__section {
+    font-size: 140%;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.create-form__button {
+    font-size: 120%;
+    width: 25rem;
+    height: 8rem;
+    box-sizing: border-box;
+    background: #07689f;
+    border: none;
+    color: #eeeeee;
+    box-shadow: 0 0 1rem #07689f;
+    transition: 0.2s all;
+    margin-bottom: 2rem;
+}
+
+/* style for kind of sushi */
+.gridCard::after {
+    content: "";
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%);
+}
+
+.gridCard[data-kind-of-drink="Beer"]::after {
+    background: rgb(211, 147, 30);
+}
+
+.gridCard[data-kind-of-drink="Wine"]::after {
+    background: rgb(129, 30, 211);
+}
+
+.gridCard[data-kind-of-drink="Sake"]::after {
+    background: rgb(231, 48, 2);
+}
+
+/* utility classes */
+.u-list-style-none {
+    list-style: none;
+}
+
+.u-grid-12 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0,1fr));
+}
+
+.u-grid-gap-2{
+    gap: 2rem;
+}
+
+.u-grid-gap-3 {
+    gap: 3rem;
+}
+
+.u-grid-gap-5{
+    gap: 5rem;
+}
+
+.u-flex-v-center {
+    display: flex;
+    align-items: center;
+}
+
+/* animations */
+.a-popup {
+    animation-name: popup;
+    animation-duration: 0.6s;
+    animation-fill-mode: backwards;
+}
+
+.a-popup:nth-of-type(2n) {
+    animation-delay: 0.1s;
+}
+
+.a-popup:nth-of-type(3n) {
+    animation-delay: 0.2s;
+}
+
+@keyframes popup{
+    0%{
+        transform: scale(1.05) translateY(2rem);
+        opacity: 0;
+    }
+    70%{
+        transform: scale(1);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* responsiveness */
+@media(max-width: 1000px) {
+    .create-form {
+        width: 90%;
+    }
+}
+
+@media(max-width: 800px) {
+    .sushiGridCard {
+        grid-column: span 6;
+    }
+}
+
+@media(max-width: 600px) {
+    .sushiCard {
+        width: 35rem;
+    }
+
+    .sushiCard__button {
+        width: 15rem;
+        height: 6rem;
+    }
+}
+
+@media(max-width: 500px) {
+    .sushiGridCard {
+        grid-column: span 12;
+    }
+}
+
+@media(max-width: 400px) {
+    .sushiCard {
+        width: 25rem;
+    }
+}
